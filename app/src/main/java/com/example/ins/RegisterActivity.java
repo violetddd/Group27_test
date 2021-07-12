@@ -125,16 +125,16 @@ public class RegisterActivity extends AppCompatActivity {
                                 @Override
                                 public void onComplete(@NonNull Task<Void> task) {
                                     if (task.isSuccessful()){
-                                        pd.dismiss();
+                                        //pd.dismiss();
 
-                                        Intent intent = new Intent(RegisterActivity.this, MainActivity.class);
+                                        Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);//change back to main activity
                                         intent. addFlags (Intent. FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
                                         startActivity(intent);
                                     }
                                 }
                             });
                         } else {
-                            pd.dismiss();
+                            //pd.dismiss();
                             //Toast.makeText(RegisterActivity.this, "You can't register with this email or password", Toast.LENGTH_SHORT).show();
                             if_success.setText("You can't register with this email or password");
                         }
