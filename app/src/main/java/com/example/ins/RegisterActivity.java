@@ -127,7 +127,7 @@ public class RegisterActivity extends AppCompatActivity {
                                     if (task.isSuccessful()){
                                         //pd.dismiss();
 
-                                        Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);//change back to main activity
+                                        Intent intent = new Intent(RegisterActivity.this, MainActivity.class);//change back to main activity
                                         intent. addFlags (Intent. FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
                                         startActivity(intent);
                                     }
